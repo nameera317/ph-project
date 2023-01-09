@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Page</title>
+    <script
+    src="https://code.jquery.com/jquery-3.6.1.min.js"
+    integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+    crossorigin="anonymous"
+  ></script>
+  <style>
+    #table-wrapper {
+            width: 100%;
+    align-items: flex-start;
+    padding: 24px 0;
+    display: block;
+}
+
+#table-headers {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  overflow: hidden;
+}
+
+#table-data {
+  max-height: 500px;
+  overflow-y: overlay;
+}
+table {
+  width: 85%;
+  font-size: 14px;
+  text-align: left;
+  border-radius: 10px;
+  justify-content: center;
+  border-collapse: collapse;
+  margin-left: 120px;
+    margin-right: 100px;
+}
+
+th {
+    text-align: left;
+    padding: 12px;
+    font-size: 14px;
+    display: table-cell;
+    vertical-align: inherit;
+    font-weight: bold;
+    text-align:inherit;
+   
+}
+
+td {
+  
+    color: #8c8c8c;
+  display: table-cell;
+    vertical-align: inherit;
+    background-color: #fff;
+    padding: 12px 24px;
+}
+tbody {
+    display: table-row-group;
+    vertical-align: middle;
+
+}
+
+tr{
+    display: table-row;
+    vertical-align: inherit;
+    border-color: inherit;
+    border-bottom: 3px solid #C3D3D9;
+}
+.body{
+    font-family: "Poppins",sans-serif;
+    background-color: #edf2f3;
+}
+
+.container{
+    width: 100%;
+    display: block;
+   
+}
+#search{
+    width: calc(100% - 100px);
+    padding: 12px 24px;
+    font-size: 15px;
+    border: 0;
+    border-bottom: 2px solid #8c8c8c;
+    margin: 0 36px 0 0;
+    outline: none;
+    background-color: #fff;
+}
+
+#wrapper{
+    width: 40%;
+    margin-top: 20px;
+    margin-left: 120px;
+    display: inline-flex;
+    margin-bottom: 50px;
+}
+#btn {
+    display: inline-block;
+    border-radius: 30px;
+    padding: 14px 36px;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    background-color: #20b883;
+    color: #fff;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    margin-left: -60px;
+}
+.h1{
+    margin-top: 50px;
+    margin-left: 120px
+}
+.body{
+    background-color: #edf2f3;
+        font-family: "Poppins",sans-serif;
+     }
+     .column1 {
+  width: auto;
+}
+
+.column2 {
+  width: auto;
+}
+
+.column3 {
+  width: auto;
+}
+
+.column4 {
+  width: auto;
+}
+
+.column5 {
+  width: auto;
+}
+.column6{
+    width: auto;
+}
+#out{
+    margin-top: 50px;
+    margin-left: 1200px;
+    margin-bottom: 30px;
+    font-size: large;
+    border: none;
+    color: black;
+    cursor: pointer;
+}
+  </style>
+</head>
+<body class="body">
+    <a href="http://127.0.0.1:5500/Login%20Page/index.html?">
+        <button id="out">Logout</button>
+        </a>
+    <div class="container">
+        <h1 class="h1">Users</h1>
+        <div id = "wrapper">
+            <input id="search" type="search" placeholder="Search by Name">
+            </div>
+            <button id="btn">Reset</button>
+    <div id="table-wrapper">
+        <div id="table-headers">
+            <table>
+                <thead>
+                    <tr>
+                        <th class="column1">Id</th>
+                        <th class="column2">User Avatar</th>
+                        <th class="column3">Full Name</th>
+                        <th class="column4">DoB</th>
+                        <th class="column5">Gender</th>
+                        <th class="column6">Curent Location</th>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+            <table  id="myTable">
+                <tbody id="table-data">
+                    </tbody>
+                    </table>
+                    </div>
+                    </div>
+    <script src="script.js"></script>
+</body>
+</html>
