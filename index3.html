@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script
+    src="https://code.jquery.com/jquery-3.6.1.min.js"
+    integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+    crossorigin="anonymous"
+  ></script>
+    <title>Product Page</title>
+    <style>
+        #table-wrapper {
+            width: 100%;
+    align-items: flex-start;
+    padding: 24px 0;
+    display: block;
+}
+
+#table-headers {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  overflow: hidden;
+}
+
+#table-data {
+  max-height: 500px;
+  overflow-y: overlay;
+}
+table {
+  width: 90%;
+  font-size: 14px;
+  text-align: left;
+  border-radius: 10px;
+  justify-content: center;
+  border-collapse: collapse;
+  margin-left: -10px;
+    margin-right: 100px;
+}
+
+th {
+    text-align: left;
+    padding: 12px 40px;
+    font-size: 14px;
+    display: table-cell;
+    vertical-align: inherit;
+    font-weight: bold;
+    text-align:inherit;
+   
+}
+
+td {
+  
+    background-color: #edf2f3;
+  display: table-cell;
+    vertical-align: inherit;
+    background-color: #fff;
+    padding: 12px 24px;
+}
+tbody {
+    display: table-row-group;
+    vertical-align: middle;
+
+}
+
+tr{
+    display: table-row;
+    vertical-align: inherit;
+    border-color: inherit;
+    border-bottom: 3px solid #C3D3D9;
+}
+.body{
+    font-family: "Poppins",sans-serif;
+    background-color: #edf2f3;
+}
+.column1 {
+    width: 80px;
+}
+.column2 {
+    width: 200px;
+}
+.column3 {
+    width: 170px;
+}
+.column4 {
+    width: 170px;
+}
+.column5 {
+    width: 150px;
+}
+.column6 {
+    width: 200px;
+}
+.container{
+    width: 100%;
+    display: inline-flex;
+}
+#wrapper{
+    width: 30%;
+    margin-top: 20px;
+    margin-left: 120px;
+    margin-bottom: 50px;
+}
+#out{
+    margin-top: 50px;
+    margin-left: 1200px;
+    margin-bottom: 30px;
+    font-size: large;
+    border: none;
+    color: black;
+    cursor: pointer;
+}
+
+    </style>
+</head>
+<body class="body">
+    <a href="http://127.0.0.1:5500/Login%20Page/index1.html">
+    <button id="out">Logout</button>
+    </a>
+    <div class="container">
+        <div id = "wrapper">
+        <h1 class="h1">Products</h1>
+        <h3 class="h3">Filters</h3>
+        <h5 id="h5"></h5>
+        <input id="filter1" name="exp" type="checkbox" onchange="fun()">
+        <label for="exp">Expired</label>
+        <br>
+        <input id="filter2" name="low" type="checkbox" onchange="fun()">
+        <label for="low">Low Stock</label>
+        </div>
+    <div id="table-wrapper">
+        <div id="table-headers">
+            <table>
+                <thead>
+                    <tr>
+                        <th class="column1">Id</th>
+                        <th class="column2">Product Name</th>
+                        <th class="column3">Product Brand</th>
+                        <th class="column4">Expiry Date</th>
+                        <th class="column5">Unit Price</th>
+                        <th class="column6">Stock</th>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+            <table>
+                <tbody id="table-data">
+                    </tbody>
+                    </table>
+                    </div>
+               </div>
+    <script src="script3.js"></script>
+</body>
+</html>
